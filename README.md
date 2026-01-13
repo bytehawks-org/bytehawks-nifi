@@ -6,8 +6,8 @@ Bytehawks NiFi custom container image
 [![Build Status](https://github.com/bytehawks-org/bytehawks-nifi/actions/workflows/build-nifi.yml/badge.svg)](https://github.com/bytehawks-org/bytehawks-nifi/actions)
 [![Security Scan](https://github.com/bytehawks-org/bytehawks-nifi/actions/workflows/build-nifi.yml/badge.svg?branch=main&event=push)](https://github.com/bytehawks-org/bytehawks-nifi/security/code-scanning)
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/bytehawks-org/nifi?style=flat-square&logo=docker)](https://hub.docker.com/r/bytehawks/bytehawks-nifi)
-[![Docker Image Size](https://img.shields.io/docker/image-size/bytehawks-org/nifi/latest?style=flat-square&logo=docker)](https://hub.docker.com/r/bytehawks/bytehawks-nifi)
+[![Docker Pulls](https://img.shields.io/docker/pulls/bytehawksorg/nifi?style=flat-square&logo=docker)](https://hub.docker.com/r/bytehawks/bytehawks-nifi)
+[![Docker Image Size](https://img.shields.io/docker/image-size/bytehawksorg/nifi/latest?style=flat-square&logo=docker)](https://hub.docker.com/r/bytehawks/bytehawks-nifi)
 
 ![NiFi Version](https://img.shields.io/badge/NiFi-2.7.2-728e9b?style=flat-square&logo=apache)
 ![Python Version](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)
