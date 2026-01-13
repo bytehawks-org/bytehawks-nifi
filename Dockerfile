@@ -1,5 +1,6 @@
 # By deafult we set NIFI_VERSION to 2.7.2, but you can override it during build time
 ARG NIFI_VERSION=2.7.0
+ARG IMAGE_VERSION=${NIFI_VERSION}
 
 # Using this FROM statement e can build the latest release of Apache NiFi 2.x
 # simply creating a new tag/release in GitHub repository with the semantic form vX.Y.Z.
@@ -8,10 +9,10 @@ FROM apache/nifi:${NIFI_VERSION}
 
 # Metadata standard OCI (Open Container Initiative)
 LABEL org.opencontainers.image.title="Bytehawks NiFi custom image with Python Support"
-LABEL org.opencontainers.image.description="Apache NiFi ${NIFI_VERSION} configured with Python 3 venv and libraries (Pandas, Azure SDK) for advanced data processing."
+LABEL org.opencontainers.image.description="Apache NiFi ${NIFI_VERSION} customized by ByteHawks. BH Version ${IMAGE_VERSION}"
 LABEL org.opencontainers.image.authors="Matteo Kutufa <mk@bytehawks.org>"
 LABEL org.opencontainers.image.source="https://github.com/bytehawks-org/bytehawks-nifi"
-LABEL org.opencontainers.image.version="${NIFI_VERSION}"
+LABEL org.opencontainers.image.version="${IMAGE_VERSION}"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 
 # We neeed to install Python, pip and some utilities (eg. curl and wget)
