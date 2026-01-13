@@ -28,8 +28,7 @@ RUN apt-get update && \
 
 RUN curl -L https://repo1.maven.org/maven2/com/azure/azure-core-http-okhttp/1.13.2/azure-core-http-okhttp-1.13.2.jar -o /opt/nifi/nifi-current/lib/azure-core-http-okhttp-1.13.2.jar 
 RUN curl -L https://repo1.maven.org/maven2/com/azure/azure-core-http-netty/1.15.13/azure-core-http-netty-1.15.13.jar -o /opt/nifi/nifi-current/lib/azure-core-http-netty-1.15.13.jar
-RUN curl -L https://repo1.maven.org/maven2/io/netty/incubator/netty-incubator-codec-http3/0.0.30.Final/netty-incubator-codec-http3-0.0.30.Final.jar -o /opt/nifi/nifi-current/lib/netty-incubator-codec-http3-0.0.30.final.jar
-RUN chown nifi:nifi /opt/nifi/nifi-current/lib/azure-core-http-*.jar /opt/nifi/nifi-current/lib/netty-incubator-codec-http3-*.jar
+RUN chown nifi:nifi /opt/nifi/nifi-current/lib/azure-core-http-*.jar
 
 # Configure NiFi Python environment
 USER nifi
@@ -51,6 +50,6 @@ RUN python3 -m pip install --upgrade pip && \
 # Force Azure pocessors to use OkHttp instead of Netty (disabled via JAVA_OPTS)
 ENV JAVA_OPTS="${JAVA_OPTS} \
     -Dazure.core.http.client.implementation=okhttp \
-    -Dreactor.netty.http.client.disableRetry=true \
+    -Dreactor.netty.http.client.disableRetry=false \
     -Dio.netty.handler.ssl.noOpenSsl=true"
 
